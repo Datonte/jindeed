@@ -1,0 +1,226 @@
+:root {
+  --primary-blue: #2557a7;
+  --hover-blue: #164081;
+  --bg-color: #f3f2f1; /* Indeed's light grey bg */
+  --text-color: #2d2d2d;
+  --border-color: #d4d2d0;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+}
+
+.nav-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Comic Neue', cursive; /* Parody font for logo */
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--primary-blue);
+  letter-spacing: -1px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.btn-primary {
+  text-decoration: none;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background-color: white;
+  padding: 3rem 1rem 4rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem; /* Large font size */
+  margin-bottom: 2rem; /* Spacing */
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 0.5rem;
+  position: relative;
+}
+
+.input-group:first-child {
+  border-right: 1px solid var(--border-color); /* Divider */
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #595959;
+  margin-bottom: 2px;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button#find-jobs-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button#find-jobs-btn:hover {
+  background-color: var(--hover-blue);
+}
+
+.post-resume {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.post-resume a {
+  color: var(--primary-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Job Feed */
+.job-feed {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job-card {
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #a0a0a0;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  color: #2d2d2d;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s;
+}
+
+.job-card:hover .job-title {
+  text-decoration-color: #2d2d2d;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #2d2d2d;
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #595959;
+  margin-bottom: 0.75rem;
+}
+
+.salary-tag {
+  display: inline-block;
+  background-color: #f3f2f1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #595959;
+  margin-bottom: 0.75rem;
+}
+
+.snippet {
+  font-size: 0.9rem;
+  color: #595959;
+  line-height: 1.4;
+}
+
+.snippet ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}

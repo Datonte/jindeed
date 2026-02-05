@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jindeed - Job Search for Jinns</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">Jindeed</div>
+      <div class="nav-links">
+        <a href="#" style="text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;">Find
+          Jobs</a>
+        <a href="reviews.html">Company Reviews</a>
+        <a href="salary.html">Salary Guide</a>
+      </div>
+      <div class="nav-auth">
+        <a href="#" class="btn-link">Sign In</a>
+        <a href="#" class="btn-primary">Post a Job</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Find jobs with Jindeed.</h1>
+        <div class="search-box">
+          <div class="input-group">
+            <span class="label">What</span>
+            <input type="text" id="what-input" placeholder="Job title, keywords, or company" />
+          </div>
+          <div class="input-group">
+            <span class="label">Where</span>
+            <input type="text" id="where-input" placeholder="City, state, or 'remote'" />
+          </div>
+          <button id="find-jobs-btn">Find Jobs</button>
+        </div>
+        <div class="post-resume">
+          <a href="#">Post your resume</a> - It only takes a few seconds.
+        </div>
+      </div>
+    </section>
+
+    <section class="job-feed" id="job-feed">
+      <!-- Jobs will be injected here by JS -->
+    </section>
+  </main>
+  <script type="module" src="/script.js"></script>
+</body>
+
+</html>
