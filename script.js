@@ -4,63 +4,72 @@ const jobs = [
         company: "Chill Inc.",
         location: "Remote",
         salary: "$120,000 - $180,000 a year",
-        snippet: "We are looking for someone to maintain the vibes.<ul><li>Must be chill.</li><li>No bad vibes allowed.</li><li>Experience in vibing required.</li></ul>"
+        snippet: "We are looking for someone to maintain the vibes.<ul><li>Must be chill.</li><li>No bad vibes allowed.</li><li>Experience in vibing required.</li></ul>",
+        postedBy: { name: "Elon Musk", initials: "EM", color: "#1DA1F2" }
     },
     {
         title: "Professional Napper",
         company: "Dreamy Mattress Co.",
         location: "Bed, NY",
         salary: "$50 an hour",
-        snippet: "Test our mattresses by sleeping on them. <ul><li>Must have 5+ years of sleeping experience.</li><li>Ability to sleep through alarms is a plus.</li></ul>"
+        snippet: "Test our mattresses by sleeping on them. <ul><li>Must have 5+ years of sleeping experience.</li><li>Ability to sleep through alarms is a plus.</li></ul>",
+        postedBy: { name: "Jeff Bezos", initials: "JB", color: "#FF9900" }
     },
     {
         title: "Meme Connoisseur",
         company: "Internet Culture Labs",
         location: "Basement, CA",
         salary: "$69,420 a year",
-        snippet: "Analyze and curate the dankest memes. <ul><li>Ph.D. in Memology preferred.</li><li>Must know when the narwhal bacons.</li></ul>"
+        snippet: "Analyze and curate the dankest memes. <ul><li>Ph.D. in Memology preferred.</li><li>Must know when the narwhal bacons.</li></ul>",
+        postedBy: { name: "Mark Zuckerberg", initials: "MZ", color: "#1877F2" }
     },
     {
         title: "Cat Herder",
         company: "Chaos Management Ltd.",
         location: "Meow Town, TX",
         salary: "$1,000,000 a year",
-        snippet: "Literally herd cats. <ul><li>Impossible job.</li><li>High risk of scratches.</li><li>Free lint rollers provided.</li></ul>"
+        snippet: "Literally herd cats. <ul><li>Impossible job.</li><li>High risk of scratches.</li><li>Free lint rollers provided.</li></ul>",
+        postedBy: { name: "Donald Trump", initials: "DT", color: "#E81B23" }
     },
     {
         title: "Banana Peeler",
         company: "Monkey Business",
         location: "Jungle, FL",
         salary: "$15 an hour",
-        snippet: "Peel bananas for our executive monkeys. <ul><li>Fast hands required.</li><li>Do not slip on peels.</li></ul>"
+        snippet: "Peel bananas for our executive monkeys. <ul><li>Fast hands required.</li><li>Do not slip on peels.</li></ul>",
+        postedBy: { name: "Bill Gates", initials: "BG", color: "#00A4EF" }
     },
     {
         title: "Professional Scroll Wheeler",
         company: "Infinite Feeds Co.",
         location: "Thumb City, NV",
         salary: "$0.01 per scroll",
-        snippet: "Do you have strong thumbs? We need you to scroll through content forever. <ul><li>Carpal tunnel insurance not included.</li><li>Must be able to double tap.</li></ul>"
+        snippet: "Do you have strong thumbs? We need you to scroll through content forever. <ul><li>Carpal tunnel insurance not included.</li><li>Must be able to double tap.</li></ul>",
+        postedBy: { name: "Tim Cook", initials: "TC", color: "#000000" }
     },
     {
         title: "Zoom Call Background Actor",
         company: "FakeBusy",
         location: "Remote",
         salary: "$20 per meeting",
-        snippet: "Need to look busy? Look at us looking at you. <ul><li>Must master the 'thinking face'.</li><li>Nodding enthusiastically required.</li></ul>"
+        snippet: "Need to look busy? Look at us looking at you. <ul><li>Must master the 'thinking face'.</li><li>Nodding enthusiastically required.</li></ul>",
+        postedBy: { name: "Satya Nadella", initials: "SN", color: "#00A4EF" }
     },
     {
         title: "Keyboard Smasher",
         company: "Rage Quit Gaming",
         location: "Mom's Basement, OR",
         salary: "Replacement Keyboards provided",
-        snippet: "Testing durability of gaming peripherals. <ul><li>Must have anger management issues.</li><li>High WPM (Words Per Minute) not required, but high SPM (Smashes Per Minute) is.</li></ul>"
+        snippet: "Testing durability of gaming peripherals. <ul><li>Must have anger management issues.</li><li>High WPM (Words Per Minute) not required, but high SPM (Smashes Per Minute) is.</li></ul>",
+        postedBy: { name: "Sam Altman", initials: "SA", color: "#10A37F" }
     },
     {
         title: "Cloud yeller",
         company: "Old Man Jenkins Inc.",
         location: "Front Lawn, KY",
         salary: "Get off my lawn!",
-        snippet: "Yell at clouds. That's it. <ul><li>Must provide own cane.</li><li>Loud voice required.</li></ul>"
+        snippet: "Yell at clouds. That's it. <ul><li>Must provide own cane.</li><li>Loud voice required.</li></ul>",
+        postedBy: { name: "Warren Buffett", initials: "WB", color: "#C41E3A" }
     }
 ];
 
@@ -77,6 +86,15 @@ function renderJobs(jobsToRender) {
         const card = document.createElement('div');
         card.className = 'job-card';
         card.innerHTML = `
+            <div class="profile-header">
+                <div class="profile-avatar" style="background-color: ${job.postedBy.color}">
+                    ${job.postedBy.initials}
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name">${job.postedBy.name}</div>
+                    <div class="profile-subtitle">CEO at ${job.company}</div>
+                </div>
+            </div>
             <h2 class="job-title">${job.title}</h2>
             <div class="company-name">${job.company}</div>
             <div class="location">${job.location}</div>
