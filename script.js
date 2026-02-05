@@ -100,5 +100,31 @@ document.getElementById('find-jobs-btn').addEventListener('click', () => {
     renderJobs(filtered);
 });
 
+
 // Initial Render
 renderJobs(jobs);
+
+// Copy to Clipboard Functionality
+const copyBtn = document.getElementById('copy-btn');
+const contractAddress = document.getElementById('contract-address');
+
+if (copyBtn && contractAddress) {
+    copyBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(contractAddress.textContent);
+            copyBtn.textContent = 'Copied!';
+            copyBtn.classList.add('copied');
+
+            setTimeout(() => {
+                copyBtn.textContent = 'Copy';
+                copyBtn.classList.remove('copied');
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            copyBtn.textContent = 'Error';
+            setTimeout(() => {
+                copyBtn.textContent = 'Copy';
+            }, 2000);
+        }
+    });
+}
