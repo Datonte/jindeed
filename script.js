@@ -271,7 +271,7 @@ function openJobModal(job) {
         ${benefitsList}
         
         <div class="modal-footer">
-            <button class="btn-primary" onclick="handleModalApply()">Apply Now (Just Kidding)</button>
+            <button class="btn-primary" onclick="handleModalApply()">Apply now</button>
         </div>
     `;
 
